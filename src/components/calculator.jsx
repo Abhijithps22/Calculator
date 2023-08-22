@@ -18,7 +18,15 @@ const Calculator = () => {
     setDisplay("");
   };
   const calBack = () => {
-    setDisplay(display.slice(0, -1));
+    if (typeof display === "string") {
+      // Handle string case
+      setDisplay(display.slice(0, -1));
+    } else if (Array.isArray(display)) {
+      // Handle array case
+      setDisplay(display.slice(0, -1));
+    } else {
+      console.error("display is not of a recognized type");
+    }
   };
 
   return (
