@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btnStyle {
+  @apply bg-slate-600 text-white text-center h-14 border-none font-semibold rounded-md hover:bg-blueDark;
+}
+.btnfunc {
+  @apply bg-white text-black text-center h-14 border-none font-bold rounded-md text-2xl;
+}
